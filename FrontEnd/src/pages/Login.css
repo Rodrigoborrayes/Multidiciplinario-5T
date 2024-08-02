@@ -1,0 +1,272 @@
+/* Contenedor principal para la página de inicio de sesión */
+.login-page {
+    display: flex;
+    width: 80%;
+    max-width: 1200px;
+    height: 80vh;
+    background-color: #ffffff;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    position: relative;
+    z-index: 1;
+    margin-top: 5.2%;
+    margin-left: 16.5%;
+}
+
+/* Estilo para la sección izquierda de la página de inicio de sesión */
+.login-left {
+    flex: 1;
+    background-color: #6C3483;
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #ECF0F1;
+    border-radius: 15px 0 0 15px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Pseudo-elemento para la burbuja animada */
+.login-left::before {
+    content: '';
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    top: -50%;
+    left: -50%;
+    background: radial-gradient(circle, #F1C40F 0%, #F39C12 70%);
+    animation: blob 20s infinite;
+    border-radius: 50%;
+    z-index: 0;
+}
+
+/* Contenedor de contenido en la sección izquierda */
+.login-left .left-content {
+    max-width: 80%;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+}
+
+/* Estilos para los encabezados */
+.login-left h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    font-weight: 700;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 1s ease-out;
+}
+
+/* Estilos para los párrafos y elementos de la lista */
+.login-left p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #ffffff;
+    margin-bottom: 20px;
+    animation: fadeIn 1s ease-out 0.5s;
+}
+
+/* Estilo para la lista de características */
+.login-left ul {
+    text-align: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.login-left li {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    color: #ffffff;
+    animation: fadeIn 1s ease-out 1s;
+}
+
+/* Estilo para los enlaces */
+.login-left a {
+    color: #FAD7A0;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.login-left a:hover {
+    color: #F5B041;
+}
+
+/* Estilo para la sección derecha de la página de inicio de sesión */
+.login-right {
+    flex: 1;
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Estilos para el formulario de inicio de sesión */
+.login-form {
+    max-width: 400px;
+    width: 100%;
+}
+
+.login-form h2 {
+    font-size: 2.5rem;
+    color: #2C3E50;
+    margin-bottom: 30px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 1s ease-out;
+}
+
+/* Estilos para los grupos de entrada */
+.input-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.input-group label {
+    display: block;
+    font-size: 1.1rem;
+    color: #2C3E50;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #BDC3C7;
+    border-radius: 5px;
+    font-size: 1rem;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.input-group input:focus {
+    border-color: #8E44AD;
+    outline: none;
+    box-shadow: 0 0 5px rgba(142, 68, 173, 0.5);
+}
+
+/* Estilos para el botón de mostrar contraseña */
+.show-password {
+    display: flex;
+    align-items: center;
+    font-size: 0.9rem;
+    color: #7F8C8D;
+    margin-top: 5px;
+}
+
+.show-password i {
+    margin-left: 5px;
+}
+
+/* Estilos para el botón de inicio de sesión */
+.login-button {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    color: #ECF0F1;
+    background-color: #8E44AD;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-button:hover {
+    background-color: #732d91;
+    transform: scale(1.05);
+}
+
+.login-button i {
+    margin-left: 10px;
+}
+
+/* Estilos para el divisor */
+.divider {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.divider::before, .divider::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid #BDC3C7;
+}
+
+.divider::before {
+    margin-right: .25em;
+}
+
+.divider::after {
+    margin-left: .25em;
+}
+
+/* Estilos para el botón de Google */
+.google-button {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #BDC3C7;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    color: #2C3E50;
+    background-color: #ffffff;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.google-button:hover {
+    background-color: #f0f0f0;
+    transform: scale(1.05);
+}
+
+.google-button img {
+    margin-right: 10px;
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes blob {
+    0%, 100% {
+        transform: scale(1) translate(-50%, -50%);
+    }
+    50% {
+        transform: scale(1.2) translate(-50%, -50%);
+    }
+}
+.google-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #4285f4;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.google-button img {
+    margin-right: 10px;
+}
